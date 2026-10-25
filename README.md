@@ -6,9 +6,9 @@ Golden Retriever CLI and developer toolkit.
 
 ## Overview
 
-- **Package Name (PyPI)**: `golden-retriever`
+- **Package Name (PyPI)**: `gret`
 - **Import Module**: `gret`
-- **CLI Command**: `gr`
+- **CLI Command**: `gret`
 - **Developer Management Tool**: `./gcli`
 
 ---
@@ -22,7 +22,7 @@ This project uses [uv](https://github.com/astral-sh/uv) for dependency managemen
 uv sync
 
 # Run the CLI
-uv run gr --help
+uv run gret --help
 
 # Run developer CLI toolsets
 ./gcli --help

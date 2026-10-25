@@ -22,7 +22,7 @@ import tomlkit
 
 from tools.gcli.common import PROJECT_ROOT
 
-LIB_NAME = "golden-retriever"
+LIB_NAME = "gret"
 PYPROJECT_TOML_PATH = PROJECT_ROOT / "pyproject.toml"
 PYPI_JSON_URL_TEMPLATE = "https://pypi.org/pypi/{package_name}/json"
 TEST_PYPI_JSON_URL_TEMPLATE = "https://test.pypi.org/pypi/{package_name}/json"

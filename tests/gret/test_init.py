@@ -14,6 +14,6 @@ import gret
 
 def test_package_metadata() -> None:
     """Test that gret package exports version and library name."""
-    assert gret.LIB_NAME == "golden-retriever"
+    assert gret.LIB_NAME == "gret"
     assert gret.LIB_VERSION == "0.1.0"
     assert gret.__version__ == "0.1.0"

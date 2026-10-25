@@ -7,7 +7,7 @@
 # express or implied, including but not limited to the warranties of
 # merchantability, fitness for a particular purpose and noninfringement.
 
-"""Test gr CLI."""
+"""Test gret CLI."""
 
 from __future__ import annotations
 
@@ -19,16 +19,16 @@ runner = CliRunner()
 
 
 def test_cli_version() -> None:
-    """Test 'gr version' command."""
+    """Test 'gret version' command."""
     result = runner.invoke(app, ["version"])
     assert result.exit_code == 0
-    assert "golden-retriever" in result.stdout
+    assert "gret" in result.stdout
     assert "0.1.0" in result.stdout
 
 
 def test_cli_default() -> None:
-    """Test invoking gr without subcommands."""
+    """Test invoking gret without subcommands."""
     result = runner.invoke(app, [])
     assert result.exit_code == 0
     assert "Golden Retriever CLI" in result.stdout
-    assert "gr --help" in result.stdout
+    assert "gret --help" in result.stdout

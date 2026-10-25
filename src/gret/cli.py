@@ -7,7 +7,7 @@
 # express or implied, including but not limited to the warranties of
 # merchantability, fitness for a particular purpose and noninfringement.
 
-"""Command line interface for Golden Retriever (gr)."""
+"""Command line interface for Golden Retriever (gret)."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from rich.console import Console
 from gret import LIB_NAME, LIB_VERSION
 
 app = typer.Typer(
-    name="gr",
+    name="gret",
     help="Golden Retriever CLI application.",
     no_args_is_help=False,
 )
@@ -41,11 +41,11 @@ def callback(ctx: typer.Context) -> None:
     if ctx.invoked_subcommand is None:
         console.print("[bold cyan]Golden Retriever CLI[/bold cyan]")
         console.print(f"{LIB_NAME} version [bold green]{LIB_VERSION}[/bold green]\n")
-        console.print("Run [bold]gr --help[/bold] for available commands.")
+        console.print("Run [bold]gret --help[/bold] for available commands.")
 
 
 def main() -> None:
-    """Execute gr CLI."""
+    """Execute gret CLI."""
     app()
 
 

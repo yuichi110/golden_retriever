@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from typing import Final
 
-LIB_NAME: Final[str] = "golden-retriever"
+LIB_NAME: Final[str] = "gret"
 LIB_VERSION: Final[str] = "0.1.0"
 
 __version__: Final[str] = LIB_VERSION

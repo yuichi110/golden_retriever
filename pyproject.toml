@@ -3,7 +3,7 @@ requires = ["uv-build<0.12"]
 build-backend = "uv_build"
 
 [project]
-name = "golden-retriever"
+name = "gret"
 version = "0.1.0"
 description = "Golden Retriever - CLI and developer toolkit."
 readme = "README.md"
@@ -19,7 +19,7 @@ dependencies = [
 Repository = "https://github.com/yuichi110/golden_retriever"
 
 [project.scripts]
-gr = "gret.cli:main"
+gret = "gret.cli:main"
 
 [tool.uv.build-backend]
 module-name = "gret"
