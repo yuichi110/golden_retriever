@@ -7,13 +7,13 @@
 # express or implied, including but not limited to the warranties of
 # merchantability, fitness for a particular purpose and noninfringement.
 
-"""Test gr module attributes."""
+"""Test gret module attributes."""
 
-import gr
+import gret
 
 
 def test_package_metadata() -> None:
-    """Test that gr package exports version and library name."""
-    assert gr.LIB_NAME == "golden-retriever"
-    assert gr.LIB_VERSION == "0.1.0"
-    assert gr.__version__ == "0.1.0"
+    """Test that gret package exports version and library name."""
+    assert gret.LIB_NAME == "golden-retriever"
+    assert gret.LIB_VERSION == "0.1.0"
+    assert gret.__version__ == "0.1.0"

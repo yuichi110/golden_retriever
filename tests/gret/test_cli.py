@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from typer.testing import CliRunner
 
-from gr.cli import app
+from gret.cli import app
 
 runner = CliRunner()
 

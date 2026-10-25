@@ -46,7 +46,7 @@ def lint(
 @app.command("type")
 def type_check() -> None:
     """Run Ty static type checker across project targets."""
-    targets = ["src/gr", "tests", "tools"]
+    targets = ["src/gret", "tests", "tools"]
     existing_targets = [t for t in targets if (PROJECT_ROOT / t).exists()]
     for target in existing_targets:
         run_command(

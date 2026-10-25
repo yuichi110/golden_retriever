@@ -14,7 +14,7 @@ from __future__ import annotations
 import typer
 from rich.console import Console
 
-from gr import LIB_NAME, LIB_VERSION
+from gret import LIB_NAME, LIB_VERSION
 
 app = typer.Typer(
     name="gr",

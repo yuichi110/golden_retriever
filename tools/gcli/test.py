@@ -44,7 +44,7 @@ def _run_pytest(
     if parallel:
         cmd.extend(["-n", "auto", "--dist", "loadfile"])
     if cov:
-        cmd.append("--cov=gr")
+        cmd.append("--cov=gret")
         if cov_report:
             cmd.append("--cov-report=term-missing")
     cmd.append(target)
@@ -60,7 +60,7 @@ def test_all(
     cov_report: bool = typer.Option(False, "--cov-report", help="Show line-by-line coverage report."),
     parallel: bool = typer.Option(False, "--parallel/--no-parallel", help="Run tests in parallel via pytest-xdist."),
 ) -> None:
-    """Run the complete test suite across all tests (gr + gcli).
+    """Run the complete test suite across all tests (gret + gcli).
 
     Args:
         cov: Whether to run coverage.
@@ -71,21 +71,22 @@ def test_all(
     console.print("[bold green]✓ All tests passed successfully![/bold green]")
 
 
-@app.command("gr")
-def test_gr(
+@app.command("gret")
+@app.command("gr", hidden=True)
+def test_gret(
     cov: bool = typer.Option(True, "--cov/--no-cov", help="Enable/disable coverage tracking."),
     cov_report: bool = typer.Option(False, "--cov-report", help="Show line-by-line coverage report."),
     parallel: bool = typer.Option(False, "--parallel/--no-parallel", help="Run tests in parallel via pytest-xdist."),
 ) -> None:
-    """Run unit tests for gr package.
+    """Run unit tests for gret package.
 
     Args:
         cov: Whether to run coverage.
         cov_report: Whether to output terminal coverage report.
         parallel: Whether to run tests in parallel.
     """
-    _run_pytest("tests/gr/", cov=cov, cov_report=cov_report, parallel=parallel)
-    console.print("[bold green]✓ All gr tests passed successfully![/bold green]")
+    _run_pytest("tests/gret/", cov=cov, cov_report=cov_report, parallel=parallel)
+    console.print("[bold green]✓ All gret tests passed successfully![/bold green]")
 
 
 @app.command("gcli")
@@ -102,7 +103,8 @@ def test_gcli(
 
 
 MODULE_SHORTCUTS: dict[str, str] = {
-    "gr": "tests/gr/",
+    "gret": "tests/gret/",
+    "gr": "tests/gret/",
     "gcli": "tests/gcli/",
 }
 

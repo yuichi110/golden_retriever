@@ -7,7 +7,7 @@ Golden Retriever CLI and developer toolkit.
 ## Overview
 
 - **Package Name (PyPI)**: `golden-retriever`
-- **Import Module**: `gr`
+- **Import Module**: `gret`
 - **CLI Command**: `gr`
 - **Developer Management Tool**: `./gcli`
 

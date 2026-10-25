@@ -17,7 +17,7 @@ from pathlib import Path
 
 from tools.gcli.common import PROJECT_ROOT, console
 
-SRC_DIR = PROJECT_ROOT / "src" / "gr"
+SRC_DIR = PROJECT_ROOT / "src" / "gret"
 TESTS_DIR = PROJECT_ROOT / "tests"
 TOOLS_DIR = PROJECT_ROOT / "tools"
 
@@ -63,7 +63,7 @@ def print_lines_summary(target_path: Path, label: str) -> int:
 
 def run_count_lines() -> int:
     """Count lines across src, tests, and tools and print summary."""
-    t1 = print_lines_summary(SRC_DIR, "src/gr")
+    t1 = print_lines_summary(SRC_DIR, "src/gret")
     t2 = print_lines_summary(TESTS_DIR, "tests")
     t3 = print_lines_summary(TOOLS_DIR, "tools")
     grand_total = t1 + t2 + t3
