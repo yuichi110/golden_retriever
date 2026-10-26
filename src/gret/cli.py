@@ -15,12 +15,18 @@ import typer
 from rich.console import Console
 
 from gret import LIB_NAME, LIB_VERSION
+from gret.rules import rules_app
+from gret.samples import samples_app
 
 app = typer.Typer(
     name="gret",
     help="Golden Retriever CLI application.",
     no_args_is_help=False,
 )
+
+app.add_typer(rules_app, name="rules")
+app.add_typer(samples_app, name="sample")
+app.add_typer(samples_app, name="samples", hidden=True)
 
 console = Console()
 

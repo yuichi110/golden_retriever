@@ -32,3 +32,12 @@ def test_cli_default() -> None:
     assert result.exit_code == 0
     assert "Golden Retriever CLI" in result.stdout
     assert "gret --help" in result.stdout
+
+
+def test_cli_help() -> None:
+    """Test 'gret --help' shows rules and sample subcommands."""
+    result = runner.invoke(app, ["--help"])
+    assert result.exit_code == 0
+    assert "rules" in result.stdout
+    assert "sample" in result.stdout
+

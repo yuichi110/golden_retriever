@@ -45,6 +45,7 @@ preview = false
 fix = true
 unsafe-fixes = false
 line-length = 120
+extend-exclude = ["src/gret/examples"]
 
 [tool.ruff.lint]
 select = [
@@ -110,3 +111,4 @@ convention = "google"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "--ignore=src/gret/examples"

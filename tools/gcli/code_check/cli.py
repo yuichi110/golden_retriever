@@ -49,8 +49,11 @@ def type_check() -> None:
     targets = ["src/gret", "tests", "tools"]
     existing_targets = [t for t in targets if (PROJECT_ROOT / t).exists()]
     for target in existing_targets:
+        cmd = ["uv", "run", "ty", "check", target]
+        if target == "src/gret":
+            cmd.extend(["--exclude", "src/gret/examples/**"])
         run_command(
-            ["uv", "run", "ty", "check", target],
+            cmd,
             desc=f"Running Ty type checker on {target}...",
         )
     console.print("[bold green]✓ All type checks passed![/bold green]")
